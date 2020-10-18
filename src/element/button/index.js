@@ -29,7 +29,7 @@ export default function Button(props) {
     </span>;
   }
 
-  if (props.type == "link") {
+  if (props.type === "link") {
     if (props.isExternal) {
       return (
         <a
@@ -49,7 +49,7 @@ export default function Button(props) {
         className={className.join(" ")}
         style={props.style}
         onClick={onClick}
-      ></Link>
+      >{props.children}</Link>
       )
     }
   }
